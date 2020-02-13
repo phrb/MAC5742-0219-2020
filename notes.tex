@@ -1,0 +1,179 @@
+% Created 2020-02-12 Wed 18:44
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper]{article}
+
+\usepackage{booktabs}
+\usepackage[margin=2cm]{geometry}
+\usepackage{sourcecodepro}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[scale=2]{ccicons}
+\usepackage{hyperref}
+\usepackage{relsize}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amsfonts}
+\usepackage{wasysym}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{textcomp}
+\usepackage{pgfplots}
+\usepackage{todonotes}
+\usepgfplotslibrary{dateplot}
+\lstdefinelanguage{Julia}%
+{morekeywords={abstract,struct,break,case,catch,const,continue,do,else,elseif,%
+end,export,false,for,function,immutable,mutable,using,import,importall,if,in,%
+macro,module,quote,return,switch,true,try,catch,type,typealias,%
+while,<:,+,-,::,/},%
+sensitive=true,%
+alsoother={$},%
+morecomment=[l]\#,%
+morecomment=[n]{\#=}{=\#},%
+morestring=[s]{"}{"},%
+morestring=[m]{'}{'},%
+}[keywords,comments,strings]%
+\lstset{ %
+backgroundcolor={},
+basicstyle=\ttfamily\scriptsize,
+breakatwhitespace=true,
+breaklines=true,
+captionpos=n,
+extendedchars=true,
+frame=n,
+language=R,
+rulecolor=\color{black},
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+stepnumber=2,
+stringstyle=\color{gray},
+tabsize=2,
+}
+\renewcommand*{\UrlFont}{\ttfamily\smaller\relax}
+\author{Pedro, Alfredo, Andrei, Giuliano, Matheus}
+\date{\today}
+\title{Notebook MAC5742-0219-2020}
+\hypersetup{
+ pdfauthor={Pedro, Alfredo, Andrei, Giuliano, Matheus},
+ pdftitle={Notebook MAC5742-0219-2020},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.2.5)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{MAC5742-0219 Edição 2020}
+\label{sec:org8591ac0}
+\begin{itemize}
+\item 85 Alunos
+\item Alfredo ocupado com MAC110
+\item EPs e Prova?
+\item Questionários após cada tópico
+\end{itemize}
+
+\subsection{Conceitos de Paralela}
+\label{sec:orgc462d6f}
+\subsubsection{Arquitetura Geral}
+\label{sec:org4c4dca5}
+\begin{itemize}
+\item CPU
+\item Memória
+\item SIMD
+\item Rede
+\item Desempenho é baixo nível
+\end{itemize}
+\subsubsection{Análise de Desempenho}
+\label{sec:org1160d19}
+\begin{itemize}
+\item Estatística básica
+\item Speedup
+\item Preocupações técnicas relacionadas a testes
+\item Warmup
+\end{itemize}
+\subsubsection{Memória Compartilhada}
+\label{sec:org3555bb7}
+\begin{itemize}
+\item Produtor/Consumidor
+\item Efeitos de Cache
+\begin{itemize}
+\item False sharing
+\end{itemize}
+\item Condição de Corrida \& Deadlock
+\item Algoritmos de exclusão
+\item Variável de condição
+\begin{itemize}
+\item Semáforo, mutex, barreira (monitores?)
+\end{itemize}
+\item Justiça
+\item Contenção
+\item C, Pthreads, OpenMP
+\end{itemize}
+\subsubsection{Aceleradores}
+\label{sec:orgbfd7ec8}
+\begin{itemize}
+\item Computação heterogênea
+\item Branch divergence
+\item Memória do dispositivo
+\item SIMD, SIMT
+\item Blocos, warps
+\item Binários gordinhos
+\item OpenACC, OpenMP, OpenCL, CUDA
+\item GPUs
+\begin{itemize}
+\item João Paulo (se CUDA)
+\item OpenCL
+\end{itemize}
+\end{itemize}
+\subsubsection{Memória Distribuída}
+\label{sec:org5137bba}
+\begin{itemize}
+\item MPI
+\item Map/Reduce
+\item Algoritmos Distribuídos
+\begin{itemize}
+\item Eleição de líder
+\item Paxos (Aula do Andrei)
+\item Reizinhos
+\item Generais Bizantinos
+\end{itemize}
+\end{itemize}
+\subsubsection{Tópicos de Programação Paralela}
+\label{sec:org540915d}
+\begin{enumerate}
+\item Profiling
+\begin{itemize}
+\item gprof
+\item perf
+\end{itemize}
+\item Paralelização de código sequencial
+\begin{itemize}
+\item paralelização do bzip
+\end{itemize}
+\item Aula invertida
+\begin{itemize}
+\item Henessy, Patterson (golden age\ldots{})
+\end{itemize}
+\end{enumerate}
+\subsubsection{EPs \& Trabalhos}
+\label{sec:org319c9e7}
+\begin{enumerate}
+\item Vetorização de Mat. Mul. "na mão"
+\begin{itemize}
+\item Facilita pra GPU
+\end{itemize}
+\item Flags de compilador
+\item Implementação de lock
+\item Implementação de pthreads
+\item Implementação de MPI
+\item "mypthreads" + "myMPI" + CUDA/OpenCL + cloud
+\item Apresentações dos Alunos de Pós
+\end{enumerate}
+\end{document}

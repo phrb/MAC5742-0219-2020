@@ -1,0 +1,134 @@
+#+STARTUP: overview indent inlineimages logdrawer
+#+TITLE: Notebook MAC5742-0219-2020
+#+AUTHOR: Pedro, Alfredo, Andrei, Giuliano, Matheus
+#+LANGUAGE:    en
+#+TAGS: noexport(n) Stats(S)
+#+EXPORT_SELECT_TAGS: Blog
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
+#+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
+
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage[margin=2cm]{geometry}
+#+LATEX_HEADER: \usepackage{sourcecodepro}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{colortbl}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{algpseudocode}
+#+LATEX_HEADER: \usepackage{algorithm}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage[english]{babel}
+#+LATEX_HEADER: \usepackage[scale=2]{ccicons}
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \usepackage{relsize}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{bm}
+#+LATEX_HEADER: \usepackage{amsfonts}
+#+LATEX_HEADER: \usepackage{wasysym}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{ragged2e}
+#+LATEX_HEADER: \usepackage{textcomp}
+#+LATEX_HEADER: \usepackage{pgfplots}
+#+LATEX_HEADER: \usepackage{todonotes}
+#+LATEX_HEADER: \usepgfplotslibrary{dateplot}
+#+LATEX_HEADER: \lstdefinelanguage{Julia}%
+#+LATEX_HEADER:   {morekeywords={abstract,struct,break,case,catch,const,continue,do,else,elseif,%
+#+LATEX_HEADER:       end,export,false,for,function,immutable,mutable,using,import,importall,if,in,%
+#+LATEX_HEADER:       macro,module,quote,return,switch,true,try,catch,type,typealias,%
+#+LATEX_HEADER:       while,<:,+,-,::,/},%
+#+LATEX_HEADER:    sensitive=true,%
+#+LATEX_HEADER:    alsoother={$},%
+#+LATEX_HEADER:    morecomment=[l]\#,%
+#+LATEX_HEADER:    morecomment=[n]{\#=}{=\#},%
+#+LATEX_HEADER:    morestring=[s]{"}{"},%
+#+LATEX_HEADER:    morestring=[m]{'}{'},%
+#+LATEX_HEADER: }[keywords,comments,strings]%
+#+LATEX_HEADER: \lstset{ %
+#+LATEX_HEADER:   backgroundcolor={},
+#+LATEX_HEADER:   basicstyle=\ttfamily\scriptsize,
+#+LATEX_HEADER:   breakatwhitespace=true,
+#+LATEX_HEADER:   breaklines=true,
+#+LATEX_HEADER:   captionpos=n,
+# #+LATEX_HEADER:   escapeinside={\%*}{*)},
+#+LATEX_HEADER:   extendedchars=true,
+#+LATEX_HEADER:   frame=n,
+#+LATEX_HEADER:   language=R,
+#+LATEX_HEADER:   rulecolor=\color{black},
+#+LATEX_HEADER:   showspaces=false,
+#+LATEX_HEADER:   showstringspaces=false,
+#+LATEX_HEADER:   showtabs=false,
+#+LATEX_HEADER:   stepnumber=2,
+#+LATEX_HEADER:   stringstyle=\color{gray},
+#+LATEX_HEADER:   tabsize=2,
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \renewcommand*{\UrlFont}{\ttfamily\smaller\relax}
+
+* MAC5742-0219 Edição 2020
+- 85 Alunos
+- Alfredo ocupado com MAC110
+- EPs e Prova?
+- Questionários após cada tópico
+
+** Conceitos de Paralela
+*** Arquitetura Geral
+- CPU
+- Memória
+- SIMD
+- Rede
+- Desempenho é baixo nível
+*** Análise de Desempenho
+- Estatística básica
+- Speedup
+- Preocupações técnicas relacionadas a testes
+- Warmup
+*** Memória Compartilhada
+- Produtor/Consumidor
+- Efeitos de Cache
+  - False sharing
+- Condição de Corrida & Deadlock
+- Algoritmos de exclusão
+- Variável de condição
+  - Semáforo, mutex, barreira (monitores?)
+- Justiça
+- Contenção
+- C, Pthreads, OpenMP
+*** Aceleradores
+- Computação heterogênea
+- Branch divergence
+- Memória do dispositivo
+- SIMD, SIMT
+- Blocos, warps
+- Binários gordinhos
+- OpenACC, OpenMP, OpenCL, CUDA
+- GPUs
+  - João Paulo (se CUDA)
+  - OpenCL
+*** Memória Distribuída
+- MPI
+- Map/Reduce
+- Algoritmos Distribuídos
+  - Eleição de líder
+  - Paxos (Aula do Andrei)
+  - Reizinhos
+  - Generais Bizantinos
+*** Tópicos de Programação Paralela
+1. Profiling
+   - gprof
+   - perf
+2. Paralelização de código sequencial
+   - paralelização do bzip
+3. Aula invertida
+   - Henessy, Patterson (golden age...)
+*** EPs & Trabalhos
+1. Vetorização de Mat. Mul. "na mão"
+   - Facilita pra GPU
+2. Flags de compilador
+3. Implementação de lock
+4. Implementação de pthreads
+5. Implementação de MPI
+6. "mypthreads" + "myMPI" + CUDA/OpenCL + cloud
+7. Apresentações dos Alunos de Pós
